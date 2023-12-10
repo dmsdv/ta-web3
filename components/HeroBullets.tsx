@@ -11,7 +11,7 @@ export function HeroBullets() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <motion.div
-            initial={{ opacity: 0, x: "50%" }}
+            initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
@@ -35,7 +35,7 @@ export function HeroBullets() {
           </motion.div>
         </div>
         <motion.div
-          initial={{ opacity: 0, x: "-50%" }}
+          initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >

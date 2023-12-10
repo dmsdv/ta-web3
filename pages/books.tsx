@@ -11,47 +11,47 @@ import { motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function getServerSideProps() {
-  const req = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_BACKEND}/api/books`
-  );
-  const res = await req.data.data;
+// export async function getServerSideProps() {
+//   const req = await axios.get(
+//     `${process.env.NEXT_PUBLIC_API_BACKEND}/api/books`
+//   );
+//   const res = await req.data.data;
 
-  return {
-    props: {
-      books: res.data,
-      totalPages: res.last_page,
-    },
-  };
-}
+//   return {
+//     props: {
+//       books: res.data,
+//       totalPages: res.last_page,
+//     },
+//   };
+// }
 
 export default function Books(props: any) {
-  const { books: initialBooks, totalPages } = props;
-  const [books, setBooks] = useState(initialBooks);
-  const [currentPage, setCurrentPage] = useState(1);
+  // const { books: initialBooks, totalPages } = props;
+  // const [books, setBooks] = useState(initialBooks);
+  // const [currentPage, setCurrentPage] = useState(1);
   
-  const handlePageChange = (newPage: number) => {
-    setCurrentPage(newPage);
+  // const handlePageChange = (newPage: number) => {
+  //   setCurrentPage(newPage);
 
-    // Memindahkan posisi ke atas halaman
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  //   // Memindahkan posisi ke atas halaman
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BACKEND}/api/books?page=${currentPage}`
-        );
-        const newData = response.data.data;
-        setBooks(newData.data); // Menyimpan data baru dalam state books
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `${process.env.NEXT_PUBLIC_API_BACKEND}/api/books?page=${currentPage}`
+  //       );
+  //       const newData = response.data.data;
+  //       setBooks(newData.data); // Menyimpan data baru dalam state books
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, [currentPage]);
+  //   fetchData();
+  // }, [currentPage]);
 
   return (
     <>
@@ -62,7 +62,7 @@ export default function Books(props: any) {
       <HeaderSimple />
 
       <Container mt={86} size={"xl"}>
-        <Group gap="xl" w={"100%"} justify="center" align="center">
+        {/* <Group gap="xl" w={"100%"} justify="center" align="center">
           {books.map((book: any, index: number) => (
             <motion.div
               key={book.id}
@@ -85,9 +85,9 @@ export default function Books(props: any) {
               </Card>
             </motion.div>
           ))}
-        </Group>
+        </Group> */}
 
-        <Group w={"100%"} my={40}>
+        {/* <Group w={"100%"} my={40}>
           {totalPages >= 0 && (
             <Pagination
               total={totalPages}
@@ -98,7 +98,7 @@ export default function Books(props: any) {
               mx={"auto"}
             />
           )}
-        </Group>
+        </Group> */}
       </Container>
 
       <FooterSocial />

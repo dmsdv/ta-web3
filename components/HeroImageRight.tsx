@@ -10,10 +10,9 @@ export function HeroImageRight() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <motion.div
-              initial={{ opacity: 0, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className={classes.animatedElement}
             >
               <Title className={classes.title}>
                 Pengetahuan anda kurang?{" "}
@@ -29,10 +28,9 @@ export function HeroImageRight() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: "-50%" }}
+              initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className={classes.animatedElement}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             >
               <Text className={classes.description} mt={30}>
                 Kami menyediakan berbagai buku populer untuk memperluas
@@ -42,10 +40,9 @@ export function HeroImageRight() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className={classes.animatedElement}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             >
               <Link href={"/books"}>
                 <Button
