@@ -69,3 +69,9 @@
         width: 100%;
     }
 }
+
+.animatedElement {
+    overflow: hidden;
+    overflow-x: clip;
+    /* atau sesuaikan dengan properti yang sesuai dengan kebutuhan Anda */
+}

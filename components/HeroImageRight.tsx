@@ -13,6 +13,7 @@ export function HeroImageRight() {
               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
+              className={classes.animatedElement}
             >
               <Title className={classes.title}>
                 Pengetahuan anda kurang?{" "}
@@ -31,6 +32,7 @@ export function HeroImageRight() {
               initial={{ opacity: 0, x: "-50%" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
+              className={classes.animatedElement}
             >
               <Text className={classes.description} mt={30}>
                 Kami menyediakan berbagai buku populer untuk memperluas
@@ -43,6 +45,7 @@ export function HeroImageRight() {
               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
+              className={classes.animatedElement}
             >
               <Link href={"/books"}>
                 <Button
