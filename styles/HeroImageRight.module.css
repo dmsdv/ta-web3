@@ -72,6 +72,6 @@
 
 .animatedElement {
     overflow: hidden;
-    overflow-x: clip;
+    overflow-x: hidden;
     /* atau sesuaikan dengan properti yang sesuai dengan kebutuhan Anda */
 }
